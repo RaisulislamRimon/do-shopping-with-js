@@ -2,7 +2,30 @@
 const cartArray = [];
 
 function display(cartProduct) {
-  console.log(cartProduct);
+  //   console.log(cartProduct);
+  let totalPrice = 0;
+  const tableBody = document.getElementById("table-body");
+  tableBody.innerHTML = "";
+  for (let i = 0; i < cartProduct.length; i++) {
+    // console.log(cartProduct[i].productName, cartProduct[i].productPrice);
+    // getting the product name & price
+    const name = cartProduct[i].productName;
+    const price = cartProduct[i].productPrice;
+    // totalPrice = totalPrice + price;
+    totalPrice += price;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+        <th>${i + 1}</th>
+        <td>${name}</td>
+        <td>${price}</td>`;
+    tableBody.appendChild(tr);
+  }
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+        <th> Total</th>
+        <th>Price</th>
+        <th>$${totalPrice}</th>`;
+  tableBody.appendChild(tr);
 }
 
 function addToCart(element) {
