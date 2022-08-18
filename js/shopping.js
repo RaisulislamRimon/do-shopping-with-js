@@ -20,7 +20,8 @@ function addToCart(element) {
     productPrice: parseFloat(productPrice),
   };
   cartArray.push(productObj);
-  console.log(productObj);
-  console.log(cartArray);
-  console.log(cartArray.length);
+  //   console.log(productObj);
+  //   console.log(cartArray);
+  //   console.log(cartArray.length);
+  document.getElementById("total-added-product").innerText = cartArray.length;
 }
