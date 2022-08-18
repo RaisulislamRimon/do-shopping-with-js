@@ -1,6 +1,10 @@
 // for storing all the cart items
 const cartArray = [];
 
+function display(cartProduct) {
+  console.log(cartProduct);
+}
+
 function addToCart(element) {
   //   console.log("addToCart", element);
   //   console.log(element.parentNode.parentNode.children);
@@ -24,4 +28,6 @@ function addToCart(element) {
   //   console.log(cartArray);
   //   console.log(cartArray.length);
   document.getElementById("total-added-product").innerText = cartArray.length;
+  //   sending cartArray to display function
+  display(cartArray);
 }
