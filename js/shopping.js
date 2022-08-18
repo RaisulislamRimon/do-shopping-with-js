@@ -19,5 +19,8 @@ function addToCart(element) {
     // productPrice: productPrice,
     productPrice: parseFloat(productPrice),
   };
+  cartArray.push(productObj);
   console.log(productObj);
+  console.log(cartArray);
+  console.log(cartArray.length);
 }
